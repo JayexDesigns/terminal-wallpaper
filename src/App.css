@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+#MainContainer {
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+#MainContainer * {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Space {
+    width: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+#Terminal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.TerminalSection {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
 }
 
-.App-link {
-  color: #61dafb;
+
+.TerminalElement {
+    margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TerminalInput {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
 }
+.TerminalInput * {
+    margin: 0.2rem 0;
+}
+
+.TerminalCursor {
+    animation: cursorAnimation 1s infinite;
+}
+
+@keyframes cursorAnimation {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+.TerminalHistory > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.TerminalHistory > div > * {
+    margin: 0.2rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+*:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+cursor: "#ffffff",
+text: "#ffffff",
+hint: "#666666",
+primary: "#ff0066",
+secondary: "#7c4dff",
+success: "#00e676",
+info: "#03a9f4",
+warning: "#ffc107",
+error: "#f44336",
+background: "#000000",
+*/
