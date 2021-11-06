@@ -2,8 +2,6 @@
 
 #MainContainer {
     min-height: 100vh;
-    background-color: #000000;
-    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +16,7 @@
 
 
 
-#Terminal {
+.Terminal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,6 +76,26 @@
 
 
 
+.cursor-c {color: #ffffff;}
+.cursor-b {background-color: #ffffff;}
+.text-c {color: #ffffff;}
+.text-b {background-color: #ffffff;}
+.hint-c {color: #666666;}
+.hint-b {background-color: #666666;}
+.primary-c {color: #ff0066;}
+.primary-b {background-color: #ff0066;}
+.secondary-c {color: #7c4dff;}
+.secondary-b {background-color: #7c4dff;}
+.success-c {color: #00e676;}
+.success-b {background-color: #00e676;}
+.info-c {color: #03a9f4;}
+.info-b {background-color: #03a9f4;}
+.warning-c {color: #ffc107;}
+.warning-b {background-color: #ffc107;}
+.error-c {color: #f44336;}
+.error-b {background-color: #f44336;}
+.background-c {color: #000000;}
+.background-b {background-color: #000000;}
 
 
 
@@ -87,31 +105,6 @@
     outline: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-cursor: "#ffffff",
-text: "#ffffff",
-hint: "#666666",
-primary: "#ff0066",
-secondary: "#7c4dff",
-success: "#00e676",
-info: "#03a9f4",
-warning: "#ffc107",
-error: "#f44336",
-background: "#000000",
-*/
+button {
+    z-index: 300;
+}
