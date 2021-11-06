@@ -31,7 +31,13 @@ var Files = [
         },
         async executeScript(command, setHistory) {
             let date = new Date();
-            setHistory(prevHistory => [...prevHistory, {content: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`, type: "text"}]);
+            let day = (date.getDate() < 10) ? `0${date.getDate()}` : `${date.getDate()}`;
+            let month = (date.getMonth() < 10) ? `0${date.getMonth()+1}` : `${date.getMonth()+1}`;
+            let year = `${date.getFullYear()}`;
+            let hour = (date.getHours() < 10) ? `0${date.getHours()}` : `${date.getHours()}`;
+            let minute = (date.getMinutes() < 10) ? `0${date.getMinutes()}` : `${date.getMinutes()}`;
+            let second = (date.getSeconds() < 10) ? `0${date.getSeconds()}` : `${date.getSeconds()}`;
+            setHistory(prevHistory => [...prevHistory, {content: `${day}/${month}/${year} ${hour}:${minute}:${second}`, type: "text"}]);
         },
     }
 ];

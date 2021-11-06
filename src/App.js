@@ -5,9 +5,9 @@ import InputHandler from './functions/InputHandler';
 import CommandHandler from './functions/CommandHandler';
 
 function App() {
-    const [history, setHistory] = useState([]);
+    const [history, setHistory] = useState([{content: "help", type: "command"}]);
     const [command, setCommand] = useState({content: '', type: 'command'});
-    const [running, setRunning] = useState(false);
+    const [running, setRunning] = useState(true);
 
     useEffect(() => {
         if (running && history[history.length-1] !== undefined && history[history.length-1].type === "command") {
