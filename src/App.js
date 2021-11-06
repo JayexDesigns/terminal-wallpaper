@@ -10,7 +10,6 @@ function App() {
     const [running, setRunning] = useState(false);
 
     useEffect(() => {
-        console.log(`history changed -> ${(history[history.length-1] !== undefined) ? history[history.length-1].content : "none"}`);
         if (running && history[history.length-1] !== undefined && history[history.length-1].type === "command") {
             CommandHandler(history[history.length-1], setHistory, running, setRunning);
         }

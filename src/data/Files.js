@@ -22,7 +22,16 @@ var Files = [
                 setHistory(prevHistory => [...prevHistory, {content: "download complete", type: "success"}]);
                 await sleep(500);
             }
-            console.log("ending");
+        },
+    },
+    {
+        name: "time.sh",
+        checkScript(command) {
+            return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
+        },
+        async executeScript(command, setHistory) {
+            let date = new Date();
+            setHistory(prevHistory => [...prevHistory, {content: `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`, type: "text"}]);
         },
     }
 ];
