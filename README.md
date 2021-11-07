@@ -1,4 +1,4 @@
-<h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/terminal-wallpaper/main/public/512.png' width='15%'></h3>
+<h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/terminal-wallpaper/main/public/logo512.png' width='15%'></h3>
 <h1 align="center">Terminal Wallpaper</h1>
 <p align="center">A simple terminal simulation for wallpaper engine (failure)</p>
 <br/>
@@ -14,8 +14,8 @@
     <li>'echo'   ->   show a message on the console</li>
 </ul>
 <ul>Scripts:
-    <li>'is_it_wednesday.sh'   ->   tells you if it is wednesday</li>
     <li>'infinite_download.sh'   ->   a script that simulates update the system infinitely, great as a wallpaper, you can stop it with ctrl + c</li>
+    <li>'is_it_wednesday.sh'   ->   tells you if it is wednesday</li>
     <li>'time.sh'   ->   display the actual day and hour</li>
 </ul>
 <br/>

@@ -22,7 +22,7 @@ var Commands = [
             return (command.content === "help");
         },
         async executeCommand(command, setHistory) {
-            setHistory(prevHistory => [...prevHistory, {content: `v: 0.1.4`, type: 'info'}]);
+            setHistory(prevHistory => [...prevHistory, {content: `v: 0.1.5`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: `this is a simple terminal simulator made with JavaScript and ReactJS, this is still a beta version made by Jayex Designs`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: ` `, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `available commands:`, type: 'text'}]);
@@ -33,10 +33,9 @@ var Commands = [
             setHistory(prevHistory => [...prevHistory, {content: `'echo'   ->   show a message on the console`, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: ` `, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `available scripts:`, type: 'text'}]);
-            setHistory(prevHistory => [...prevHistory, {content: `'is_it_wednesday.sh'   ->   tells you if it is wednesday`, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `'infinite_download.sh'   ->   a script that simulates update the system infinitely, great as a wallpaper, you can stop it with ctrl + c`, type: 'text'}]);
+            setHistory(prevHistory => [...prevHistory, {content: `'is_it_wednesday.sh'   ->   tells you if it is wednesday`, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `'time.sh'   ->   display the actual day and hour`, type: 'text'}]);
-            setHistory(prevHistory => [...prevHistory, {content: ` `, type: 'text'}]);
         },
     },
     {

@@ -2,15 +2,6 @@ import sleep from '../functions/sleep';
 
 var Files = [
     {
-        name: "is_it_wednesday.sh",
-        checkScript(command) {
-            return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
-        },
-        async executeScript(command, setHistory) {
-            setHistory(prevHistory => [...prevHistory, {content: ((new Date()).getDay() === 3) ? "yes" : "no", type: "text"}]);
-        },
-    },
-    {
         name: "infinite_download.sh",
         checkScript(command) {
             return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
@@ -22,6 +13,15 @@ var Files = [
                 setHistory(prevHistory => [...prevHistory, {content: "download complete", type: "success"}]);
                 await sleep(500);
             }
+        },
+    },
+    {
+        name: "is_it_wednesday.sh",
+        checkScript(command) {
+            return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
+        },
+        async executeScript(command, setHistory) {
+            setHistory(prevHistory => [...prevHistory, {content: ((new Date()).getDay() === 3) ? "yes" : "no", type: "text"}]);
         },
     },
     {
