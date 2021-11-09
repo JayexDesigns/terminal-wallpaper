@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/terminal-wallpaper/static/css/main.ce4482c0.chunk.css",
-    "main.js": "/terminal-wallpaper/static/js/main.b13fff70.chunk.js",
-    "main.js.map": "/terminal-wallpaper/static/js/main.b13fff70.chunk.js.map",
+    "main.css": "/terminal-wallpaper/static/css/main.879f50d6.chunk.css",
+    "main.js": "/terminal-wallpaper/static/js/main.8c6cbf9d.chunk.js",
+    "main.js.map": "/terminal-wallpaper/static/js/main.8c6cbf9d.chunk.js.map",
     "runtime-main.js": "/terminal-wallpaper/static/js/runtime-main.b9997bd6.js",
     "runtime-main.js.map": "/terminal-wallpaper/static/js/runtime-main.b9997bd6.js.map",
-    "static/js/2.a71ed108.chunk.js": "/terminal-wallpaper/static/js/2.a71ed108.chunk.js",
-    "static/js/2.a71ed108.chunk.js.map": "/terminal-wallpaper/static/js/2.a71ed108.chunk.js.map",
+    "static/js/2.d7b6b9eb.chunk.js": "/terminal-wallpaper/static/js/2.d7b6b9eb.chunk.js",
+    "static/js/2.d7b6b9eb.chunk.js.map": "/terminal-wallpaper/static/js/2.d7b6b9eb.chunk.js.map",
     "index.html": "/terminal-wallpaper/index.html",
-    "static/css/main.ce4482c0.chunk.css.map": "/terminal-wallpaper/static/css/main.ce4482c0.chunk.css.map",
-    "static/js/2.a71ed108.chunk.js.LICENSE.txt": "/terminal-wallpaper/static/js/2.a71ed108.chunk.js.LICENSE.txt"
+    "static/css/main.879f50d6.chunk.css.map": "/terminal-wallpaper/static/css/main.879f50d6.chunk.css.map",
+    "static/js/2.d7b6b9eb.chunk.js.LICENSE.txt": "/terminal-wallpaper/static/js/2.d7b6b9eb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b9997bd6.js",
-    "static/js/2.a71ed108.chunk.js",
-    "static/css/main.ce4482c0.chunk.css",
-    "static/js/main.b13fff70.chunk.js"
+    "static/js/2.d7b6b9eb.chunk.js",
+    "static/css/main.879f50d6.chunk.css",
+    "static/js/main.8c6cbf9d.chunk.js"
   ]
 }
