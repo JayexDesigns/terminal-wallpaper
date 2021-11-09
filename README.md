@@ -19,4 +19,4 @@
     <li>'time.sh'   ->   display the actual day and hour</li>
 </ul>
 <br/>
-<h2 align="center"><a href="https://jayexdesigns.github.io/terminal-wallpaper/">TRY IT!</a></h2>
+<h2 align="center"><a href="https://jayexdesigns.github.io/terminal-wallpaper/">TRY IT!</a>&nbsp;&nbsp;&nbsp;<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2650274368">WALLPAPER</a></h2>
