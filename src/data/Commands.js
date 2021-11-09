@@ -3,7 +3,7 @@ import Files from './Files';
 var Commands = [
     {
         name: "not found",
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             setHistory(prevHistory => [...prevHistory, {content: `command: '${command.content}' not found`, type: 'error'}]);
         },
     },
@@ -12,7 +12,7 @@ var Commands = [
         checkCommand(command) {
             return (command.content === "hello" || command.content === "hi" || command.content === "hello world");
         },
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             setHistory(prevHistory => [...prevHistory, {content: `hello world!`, type: 'success'}]);
         },
     },
@@ -21,8 +21,8 @@ var Commands = [
         checkCommand(command) {
             return (command.content === "help");
         },
-        async executeCommand(command, setHistory) {
-            setHistory(prevHistory => [...prevHistory, {content: `v: 0.1.7`, type: 'info'}]);
+        async executeCommand(command, setHistory, setRunning) {
+            setHistory(prevHistory => [...prevHistory, {content: `v: 0.1.8`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: `this is a simple terminal simulator made with JavaScript and ReactJS, this is still a beta version made by Jayex Designs`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: ` `, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `available commands:`, type: 'text'}]);
@@ -48,10 +48,10 @@ var Commands = [
                 return false;
             }
         },
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             for (let i = 0; i < Files.length; ++i) {
                 if (Files[i].checkScript(command)) {
-                    await Files[i].executeScript(command, setHistory);
+                    await Files[i].executeScript(command, setHistory, setRunning);
                     break;
                 };
             }
@@ -62,7 +62,7 @@ var Commands = [
         checkCommand(command) {
             return (command.content === "ls" || command.content.startsWith("ls "));
         },
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             for (let i = 0; i < Files.length; ++i) {
                 setHistory(prevHistory => [...prevHistory, {content: `'${Files[i].name}'`, type: "text"}]);
             }
@@ -73,7 +73,7 @@ var Commands = [
         checkCommand(command) {
             return (command.content === "clear");
         },
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             setHistory([]);
         },
     },
@@ -82,7 +82,7 @@ var Commands = [
         checkCommand(command) {
             return (command.content === "echo" || command.content.startsWith("echo "));
         },
-        async executeCommand(command, setHistory) {
+        async executeCommand(command, setHistory, setRunning) {
             if (command.content === "echo") setHistory(prevHistory => [...prevHistory, {content: ` `, type: "text"}]);
             else setHistory(prevHistory => [...prevHistory, {content: `${command.content.substring(5, command.content.length)}`, type: "text"}]);
         },

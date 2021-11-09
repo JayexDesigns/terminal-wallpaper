@@ -6,8 +6,8 @@ var Files = [
         checkScript(command) {
             return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
         },
-        async executeScript(command, setHistory) {
-            await infinite_download(command, setHistory);
+        async executeScript(command, setHistory, setRunning) {
+            await infinite_download(command, setHistory, setRunning);
         },
     },
     {
@@ -15,7 +15,7 @@ var Files = [
         checkScript(command) {
             return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
         },
-        async executeScript(command, setHistory) {
+        async executeScript(command, setHistory, setRunning) {
             setHistory(prevHistory => [...prevHistory, {content: ((new Date()).getDay() === 3) ? "yes" : "no", type: "text"}]);
         },
     },
@@ -24,7 +24,7 @@ var Files = [
         checkScript(command) {
             return (command.content === `./${this.name}` || command.content.startsWith(`./${this.name} `));
         },
-        async executeScript(command, setHistory) {
+        async executeScript(command, setHistory, setRunning) {
             let date = new Date();
             let day = (date.getDate() < 10) ? `0${date.getDate()}` : `${date.getDate()}`;
             let month = (date.getMonth() < 10) ? `0${date.getMonth()+1}` : `${date.getMonth()+1}`;

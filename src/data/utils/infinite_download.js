@@ -1,11 +1,20 @@
 import sleep from '../../functions/sleep';
 
-export default async function infinite_download(command, setHistory) {
+export default async function infinite_download(command, setHistory, setRunning) {
+    let prevValue = true;
     let addEntry = (content, type, replace=false) => {
+        if (!prevValue) return;
         if (!replace) setHistory(prevHistory => [...prevHistory, {content: content, type: type}]);
         else setHistory(prevHistory => [...prevHistory.slice(0, prevHistory.length-1), {content: content, type: type}]);
+        setRunning(value => {
+            if (value) return value;
+            else {
+                prevValue = false;
+                return value;
+            }
+        });
     }
-    while (true) {
+    while (prevValue) {
         addEntry("0% [Working]", "warning");
         await sleep(500);
         addEntry("Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease", "text", true);
