@@ -4,10 +4,13 @@ import Command from './components/Command';
 import InputHandler from './functions/InputHandler';
 import CommandHandler from './functions/CommandHandler';
 
+let firstCommand = {content: "help", type: "command"};
+// let firstCommand = {content: "./infinite_download.sh", type: "command"};
+
 function App() {
-    const [history, setHistory] = useState([{content: "help", type: "command"}]);
+    const [history, setHistory] = useState([firstCommand]);
     const [command, setCommand] = useState({content: '', type: 'command'});
-    const [running, setRunning] = useState(true);
+    const [running, setRunning] = useState((firstCommand.content === "") ? false : true);
 
     useEffect(() => {
         if (running && history[history.length-1] !== undefined && history[history.length-1].type === "command") {

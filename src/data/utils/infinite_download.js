@@ -5,7 +5,7 @@ export default async function infinite_download(command, setHistory) {
         if (!replace) setHistory(prevHistory => [...prevHistory, {content: content, type: type}]);
         else setHistory(prevHistory => [...prevHistory.slice(0, prevHistory.length-1), {content: content, type: type}]);
     }
-    for (let i = 0; i < 10; ++i) {
+    while (true) {
         addEntry("0% [Working]", "warning");
         await sleep(500);
         addEntry("Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease", "text", true);
