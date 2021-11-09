@@ -1,8 +1,8 @@
 <h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/terminal-wallpaper/main/public/logo512.png' width='15%'></h3>
 <h1 align="center">Terminal Wallpaper</h1>
-<p align="center">A simple terminal simulation for wallpaper engine (failure)</p>
+<p align="center">A simple terminal simulation for wallpaper engine</p>
 <br/>
-<p>The initial idea was to make an interactive terminal simulation for wallpaper engine, after finishing the project I realised wallpaper engine blocks the keyboard input so basically the whole project is now useless. It would be a shame to let it die so it will be available for wallpaper engine but it will not be interactive.</p>
+<p>The initial idea was to make an interactive terminal simulation for wallpaper engine, after finishing the project I realised wallpaper engine blocks the keyboard input so basically the whole project is now kind of useless. It would be a shame to let it die so it is available for wallpaper engine but it is not interactive.</p>
 <br/>
 <h2>Usage</h2>
 <p>There are a small set of commands that you can use, there is also some scripts that can be executed. Here's a list of all of them:</p>

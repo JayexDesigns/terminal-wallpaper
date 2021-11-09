@@ -22,7 +22,7 @@ var Commands = [
             return (command.content === "help");
         },
         async executeCommand(command, setHistory, setRunning) {
-            setHistory(prevHistory => [...prevHistory, {content: `v: 0.1.8`, type: 'info'}]);
+            setHistory(prevHistory => [...prevHistory, {content: `v: 0.2.0`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: `this is a simple terminal simulator made with JavaScript and ReactJS, this is still a beta version made by Jayex Designs`, type: 'info'}]);
             setHistory(prevHistory => [...prevHistory, {content: ` `, type: 'text'}]);
             setHistory(prevHistory => [...prevHistory, {content: `available commands:`, type: 'text'}]);

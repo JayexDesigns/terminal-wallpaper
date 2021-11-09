@@ -4,6 +4,7 @@ function Command(props) {
     let command = {
         content: props.content,
         type: props.type,
+        properties: props.properties,
     }
     if (command.type === "command") command.content = `> ${command.content}`;
 
@@ -11,24 +12,24 @@ function Command(props) {
         <div className="TerminalElement">
             {command.content.split("").map((letter, index) => {
                 if (letter === " ") return <span className="Space" key={index}></span>
-                else return <p key={index} className={(() => {
+                else return <p key={index} style={{color: (() => {
                     switch (command.type) {
                         case "command":
-                            return "text-c";
+                            return props.properties.textColor;
                         case "text":
-                            return "text-c";
+                            return props.properties.textColor;
                         case "success":
-                            return "success-c";
+                            return props.properties.successColor;
                         case "info":
-                            return "info-c";
+                            return props.properties.infoColor;
                         case "warning":
-                            return "warning-c";
+                            return props.properties.warningColor;
                         case "error":
-                            return "error-c";
+                            return props.properties.errorColor;
                         default:
-                            return "text-c";
+                            return props.properties.textColor;
                     }
-                })()}>{letter}</p>
+                })()}}>{letter}</p>
             })}
         </div>
     );

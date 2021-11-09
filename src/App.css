@@ -76,31 +76,6 @@
 
 
 
-.cursor-c {color: #ffffff;}
-.cursor-b {background-color: #ffffff;}
-.text-c {color: #ffffff;}
-.text-b {background-color: #ffffff;}
-.hint-c {color: #666666;}
-.hint-b {background-color: #666666;}
-.primary-c {color: #ff0066;}
-.primary-b {background-color: #ff0066;}
-.secondary-c {color: #7c4dff;}
-.secondary-b {background-color: #7c4dff;}
-.success-c {color: #00e676;}
-.success-b {background-color: #00e676;}
-.info-c {color: #03a9f4;}
-.info-b {background-color: #03a9f4;}
-.warning-c {color: #ffc107;}
-.warning-b {background-color: #ffc107;}
-.error-c {color: #f44336;}
-.error-b {background-color: #f44336;}
-.background-c {color: #000000;}
-.background-b {background-color: #000000;}
-
-
-
-
-
 *:focus {
     outline: none;
 }
