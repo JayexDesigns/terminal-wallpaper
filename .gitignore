@@ -2,9 +2,6 @@
 /node_modules
 /.pnp
 .pnp.js
-project.json
-preview.png
-preview.jpg
 
 # testing
 /coverage
