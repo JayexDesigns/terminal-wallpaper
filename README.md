@@ -1,4 +1,4 @@
-<h3 align="center"><img src='https://raw.githubusercontent.com/JayexDesigns/terminal-wallpaper/main/public/logo512.png' width='15%'></h3>
+<h3 align="center"><img src='./preview.png' width='15%'></h3>
 <h1 align="center">Terminal Wallpaper</h1>
 <p align="center">A simple terminal simulation for Wallpaper Engine</p>
 <br/>
